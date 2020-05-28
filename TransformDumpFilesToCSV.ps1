@@ -7,8 +7,9 @@ $notepad = 'C:\windows\system32\notepad.exe'
 
 
 $argumentList = ('-jar ' +""""+$saxon+""""+' -t -s:'+""""+$xml+""""+' -xsl:'+""""+$xslt+""""+' -o:'+""""+$output+""""+' --suppressXsltNamespaceCheck:on')
-Write-Output $argumentList
+echo $argumentList
 
+$argumentList_old = '-jar C:\Users\kieran.caulfield\SAXON\saxon9he.jar -t -s:"C:\Users\kieran.caulfield\OneDrive - Birkett Long LLP\Documents\Spool\XML\V3PR_DumpFileFormatted.xml" -xsl:"C:\Users\kieran.caulfield\OneDrive - Birkett Long LLP\Documents\Development\DumpFileExtractAGENDA.xslt" -o:"C:\Users\kieran.caulfield\OneDrive - Birkett Long LLP\Documents\Spool\CSV\V3PR_AGENDA.csv" --suppressXsltNamespaceCheck:on'
 $errorLog = 'C:\Users\kieran.caulfield\SAXON\stderr_CSV.txt'
 
 Start-Process -FilePath $java `
